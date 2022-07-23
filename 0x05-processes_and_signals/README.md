@@ -68,3 +68,43 @@
 
 ***8. Write a Bash script that kills the process 7-highlander.***
 
+
+**Advanced tasks**
+
+***9. Write a Bash script that:***
+
+	- Creates the file /var/run/myscript.pid containing its PID
+	- Displays To infinity and beyond indefinitely
+	- Displays I hate the kill command when receiving a SIGTERM signal
+	- Displays Y U no love me?! when receiving a SIGINT signal
+	- Deletes the file /var/run/myscript.pid and terminates itself when receiving a SIGQUIT or SIGTERM signal
+
+		sylvain@ubuntu$ sudo ./100-process_and_pid_file
+		To infinity and beyond
+		To infinity and beyond
+		^CY U no love me?!
+
+	* Executing the 100-process_and_pid_file script and killing it with ctrl+c.
+
+
+Terminal #0
+
+		sylvain@ubuntu$ sudo ./100-process_and_pid_file
+		To infinity and beyond
+		To infinity and beyond
+		To infinity and beyond
+		To infinity and beyond
+		To infinity and beyond
+		To infinity and beyond
+		To infinity and beyond
+		To infinity and beyond
+		To infinity and beyond
+		To infinity and beyond
+		To infinity and beyond
+		I hate the kill command
+		sylvain@ubuntu$
+
+Terminal #1
+
+		sylvain@ubuntu$ sudo pkill -f 100-process_and_pid_file
+		sylvain@ubuntu$
