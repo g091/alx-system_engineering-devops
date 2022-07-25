@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# while loop...
+# Displays Best School 10 times, but for the 9th iteration,
+# displays Best School and then Hi on a new line
+
 i=0
 while [ $i -lt 10 ]
 do
