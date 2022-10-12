@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Installs nginx on server
+
+sudo apt update
+sudo apt -y install nginx
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+echo 'Hello World!' > /var/www/html/index.html
+service nginx restart
